@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  descricao: MyText
+  url_image: MyString
+  categoria: MyString
+  tecnologia: MyString
+  data_criacao: 2024-01-31
+  desenvolvedor: MyString
+  url_documentacao: MyString
+  url_repositorio: MyString
+  avaliacao_media: 1.5
+  contagem_avaliacoes: 1
+
+two:
+  nome: MyString
+  descricao: MyText
+  url_image: MyString
+  categoria: MyString
+  tecnologia: MyString
+  data_criacao: 2024-01-31
+  desenvolvedor: MyString
+  url_documentacao: MyString
+  url_repositorio: MyString
+  avaliacao_media: 1.5
+  contagem_avaliacoes: 1

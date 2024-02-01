@@ -1,0 +1,72 @@
+<%= form_with(model: inteligencia_artificial) do |form| %>
+  <% if inteligencia_artificial.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(inteligencia_artificial.errors.count, "error") %> prohibited this inteligencia_artificial from being saved:</h2>
+
+      <ul>
+        <% inteligencia_artificial.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :descricao, style: "display: block" %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div>
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div>
+    <%= form.label :categoria, style: "display: block" %>
+    <%= form.text_field :categoria %>
+  </div>
+
+  <div>
+    <%= form.label :tecnologia, style: "display: block" %>
+    <%= form.text_field :tecnologia %>
+  </div>
+
+  <div>
+    <%= form.label :data_criacao, style: "display: block" %>
+    <%= form.date_field :data_criacao %>
+  </div>
+
+  <div>
+    <%= form.label :desenvolvedor, style: "display: block" %>
+    <%= form.text_field :desenvolvedor %>
+  </div>
+
+  <div>
+    <%= form.label :url_documentacao, style: "display: block" %>
+    <%= form.text_field :url_documentacao %>
+  </div>
+
+  <div>
+    <%= form.label :url_repositorio, style: "display: block" %>
+    <%= form.text_field :url_repositorio %>
+  </div>
+
+  <div>
+    <%= form.label :avaliacao_media, style: "display: block" %>
+    <%= form.text_field :avaliacao_media %>
+  </div>
+
+  <div>
+    <%= form.label :contagem_avaliacoes, style: "display: block" %>
+    <%= form.number_field :contagem_avaliacoes %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

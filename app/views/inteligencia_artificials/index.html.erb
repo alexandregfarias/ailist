@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Inteligencia artificials</h1>
+
+<div id="inteligencia_artificials">
+  <% @inteligencia_artificials.each do |inteligencia_artificial| %>
+    <%= render inteligencia_artificial %>
+    <p>
+      <%= link_to "Show this inteligencia artificial", inteligencia_artificial %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New inteligencia artificial", new_inteligencia_artificial_path %>
