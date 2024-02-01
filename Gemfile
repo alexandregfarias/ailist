@@ -5,6 +5,10 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
+gem 'sassc-rails'
+# e/ou, dependendo do que você precisa
+gem 'dartsass-sprockets'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
