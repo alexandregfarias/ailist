@@ -5,9 +5,16 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
-gem 'sassc-rails'
-# e/ou, dependendo do que você precisa
+# Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+# gem 'sassc-rails'
+
+gem 'bootstrap', '~> 5.3.2'
+
+# dart-sass is the primary implementation of Sass, which means it gets new features before any other implementation.
 gem 'dartsass-sprockets'
+
+# gem jquery
+gem 'jquery-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
