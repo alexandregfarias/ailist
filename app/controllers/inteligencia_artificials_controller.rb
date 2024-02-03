@@ -1,5 +1,6 @@
 class InteligenciaArtificialsController < ApplicationController
-  before_action :set_inteligencia_artificial, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_admin, only: [:new, :create]
 
   # GET /inteligencia_artificials or /inteligencia_artificials.json
   def index
@@ -66,5 +67,11 @@ class InteligenciaArtificialsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def inteligencia_artificial_params
       params.require(:inteligencia_artificial).permit(:nome, :descricao, :url_image, :categoria, :tecnologia, :data_criacao, :desenvolvedor, :url_documentacao, :url_repositorio, :avaliacao_media, :contagem_avaliacoes)
+    end
+
+    def check_admin
+      unless current_user.admin?
+        redirect_to root_path, alert: 'Você não tem permissão para acessar essa página.'
+      end
     end
 end
