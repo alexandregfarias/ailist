@@ -31,6 +31,6 @@ bard = InteligenciaArtificial.find_or_create_by(nome: 'BARD') do |ia|
   puts ia_criada
 end
 
-if ia_criada == false
-  puts "Nenhuma inteligência artificial foi criada."
+if !ia_criada
+   puts "Nenhuma inteligência artificial foi criada, pois elas já existem no banco de dados.\nIsso foi feito para evitar duplicidade de registros."
 end 
