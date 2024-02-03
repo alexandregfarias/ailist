@@ -1,9 +1,36 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+puts "Criando registros de inteligências artificiais..."
+
+ia_criada = false
+chat_gpt = InteligenciaArtificial.find_or_create_by(nome: 'ChatGPT') do |ia|
+  ia.descricao = 'ChatGPT é um modelo de linguagem baseado na arquitetura GPT (Generative Pre-trained Transformer) desenvolvido pela OpenAI. É capaz de compreender e gerar texto natural, permitindo conversações ricas e contextuais. É amplamente utilizado para tarefas como geração de texto, conversação, e respostas a perguntas.'
+  ia.url_image = 'PENDENTE'
+  ia.categoria = 'Modelo de linguagem'
+  ia.tecnologia = 'GPT-4.0'
+  ia.data_criacao = '2020-06-11'
+  ia.desenvolvedor = 'OpenAI'
+  ia.url_documentacao = 'https://platform.openai.com/docs/'
+  ia.url_repositorio = 'N/A'
+  ia.avaliacao_media = 4.8
+  ia.contagem_avaliacoes = 1000
+  ia_criada = "Inteligência artificial ChatGPT criada com sucesso!"
+  puts ia_criada
+end
+
+bard = InteligenciaArtificial.find_or_create_by(nome: 'BARD') do |ia|
+  ia.descricao = 'Bard é um modelo de linguagem do Google AI que pode gerar texto, traduzir idiomas, escrever conteúdo criativo e responder perguntas de forma informativa.'
+  ia.url_image = 'PENDENTE'
+  ia.categoria = 'Modelo de linguagem'
+  ia.tecnologia = 'Gemini Pro'
+  ia.data_criacao = '2021-01-01'
+  ia.desenvolvedor = 'Google AI'
+  ia.url_documentacao = ''
+  ia.url_repositorio = 'n/a'
+  ia.avaliacao_media = 4.5
+  ia.contagem_avaliacoes = 500
+  ia_criada = "Inteligência artificial BARD criada com sucesso!"
+  puts ia_criada
+end
+
+if ia_criada == false
+  puts "Nenhuma inteligência artificial foi criada."
+end 
