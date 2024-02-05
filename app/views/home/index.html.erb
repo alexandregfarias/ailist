@@ -30,6 +30,24 @@
   </div>
 </nav>
 </nav>
+<br> <!-- É INTERESSANTE USAR CSS PARA SETAR A DISTÂNCIA IDEAL ENTRE OS ELEMENTOS -->
 
-<h1>AI List</h1>
-<p>Aqui tem a inteligência artificial que você procura</p>
+<div class="card" style="width: 18rem;">
+<img src="<%= @bard.url_image %>" class="card-img-top" alt="<%= @bard.nome %>">
+  <div class="card-body">
+    <h5 class="card-title"><% %></h5>
+    <p class="card-text"> <%= @bard.nome %> </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+<img src="<%= @gpt.url_image %>" class="card-img-top" alt="<%= @gpt.nome %>">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text"><%= @gpt.nome %> </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

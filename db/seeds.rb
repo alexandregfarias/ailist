@@ -3,7 +3,7 @@ puts "Criando registros de inteligências artificiais..."
 ia_criada = false
 chat_gpt = InteligenciaArtificial.find_or_create_by(nome: 'ChatGPT') do |ia|
   ia.descricao = 'ChatGPT é um modelo de linguagem baseado na arquitetura GPT (Generative Pre-trained Transformer) desenvolvido pela OpenAI. É capaz de compreender e gerar texto natural, permitindo conversações ricas e contextuais. É amplamente utilizado para tarefas como geração de texto, conversação, e respostas a perguntas.'
-  ia.url_image = 'PENDENTE'
+  ia.url_image = 'https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1689335490/catalog/1679817183962824704/f74kn9tsdqrs9wi2g1pv.jpg'
   ia.categoria = 'Modelo de linguagem'
   ia.tecnologia = 'GPT-4.0'
   ia.data_criacao = '2020-06-11'
@@ -18,7 +18,7 @@ end
 
 bard = InteligenciaArtificial.find_or_create_by(nome: 'BARD') do |ia|
   ia.descricao = 'Bard é um modelo de linguagem do Google AI que pode gerar texto, traduzir idiomas, escrever conteúdo criativo e responder perguntas de forma informativa.'
-  ia.url_image = 'PENDENTE'
+  ia.url_image = 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg'
   ia.categoria = 'Modelo de linguagem'
   ia.tecnologia = 'Gemini Pro'
   ia.data_criacao = '2021-01-01'
