@@ -6,12 +6,6 @@ ruby "3.1.2"
 gem "rails", "~> 7.1.3"
 
 # Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-# gem 'sassc-rails'
-
-gem 'bootstrap', '~> 5.3.2'
-
-# dart-sass is the primary implementation of Sass, which means it gets new features before any other implementation.
-gem 'dartsass-sprockets'
 
 # gem jquery
 gem 'jquery-rails'
@@ -78,3 +72,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "tailwindcss-rails", "~> 2.3"
